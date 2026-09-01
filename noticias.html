@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fandemia</title>
+    <title>Noticias - Fandemia</title>
     <style>
         :root {
             --primary: #8a2be2;
@@ -24,7 +24,7 @@
 
         header {
             background-color: #fff1fe;
-            border-bottom: 2px solid #f0e6fa;
+            border-bottom: 2px solid #f2d8e9;
             text-align: center;
             padding: 1.5rem 1rem;
         }
@@ -74,7 +74,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
@@ -88,7 +88,7 @@
 
         .main-img {
             width: 100%;
-            max-height: 380px;
+            max-height: 350px;
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 1.5rem;
@@ -98,14 +98,103 @@
             color: var(--primary);
         }
 
-        .empty-placeholder {
-            border: 2px dashed #ccc;
-            background: #fafafa;
-            padding: 3rem 1.5rem;
-            border-radius: 8px;
-            color: #777;
-            text-align: center;
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
             margin-top: 1.5rem;
+        }
+
+        details.news-card {
+            background: #fff8fe;
+            border-radius: 8px;
+            padding: 1.2rem;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        details.news-card[open] {
+            background: #ffffff;
+            border-left-color: var(--secondary);
+            box-shadow: 0 4px 12px rgba(138, 43, 226, 0.12);
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+            position: relative;
+            padding-right: 25px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "▼";
+            position: absolute;
+            right: 0;
+            top: 2px;
+            font-size: 0.8rem;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::after {
+            transform: rotate(180deg);
+            color: var(--secondary);
+        }
+
+        .news-card .date {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 0.3rem;
+            font-weight: normal;
+        }
+
+        .news-card h3 {
+            display: inline-block;
+            margin: 0;
+            color: var(--primary);
+            font-size: 1.15rem;
+            line-height: 1.3;
+        }
+
+        .short-desc {
+            font-size: 0.92rem;
+            color: #555;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+
+        .full-content {
+            margin-top: 1rem;
+            padding-top: 0.8rem;
+            border-top: 1px dashed #e5d0ed;
+            font-size: 0.95rem;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .full-content p {
+            margin-bottom: 0.8rem;
+        }
+
+        .full-content ul {
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .full-content li {
+            margin-bottom: 0.4rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         footer {
@@ -122,7 +211,7 @@
 
     <header>
         <a href="index.html">
-            <img src="log.jpg" alt="Logo Fandemia" class="header-logo">
+            <img src="logo.jpg" alt="Logo Fandemia" class="header-logo">
         </a>
         <p>Tu pasión, tu mundo, tus productos favoritos</p>
     </header>
@@ -130,17 +219,128 @@
     <nav>
         <a href="index.html">Inicio</a>
         <a href="actividades.html">Contenido Semanal</a>
-        <a href="noticias.html">Noticias y Tips</a>
+        <a href="noticias.html">Noticias y Novedades</a>
     </nav>
 
     <div class="container">
         <div class="content-box">
-            <img class="main-img" src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=800" alt="Noticias y Novedades">
+            <img class="main-img" src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=800" alt="Novedades Fandemia">
             
-            <h1>Noticias y Tips</h1>
+            <h1>Noticias y Novedades</h1>
+            <p>Haz clic en la flechita de cada tarjeta para desplegar los detalles completos de los lanzamientos, recomendaciones y novedades de Fandemia.</p>
 
-            <div class="empty-placeholder">
-                <h3>Próximamente</h3>
+            <div class="news-list">
+                
+                <details class="news-card">
+                    <summary>
+                        <div class="date">Septiembre 2026</div>
+                        <h3>¡Nueva colección para el cuidado de fotocards!</h3>
+                        <p class="short-desc">Fundas, binders y accesorios diseñados para proteger colecciones.</p>
+                    </summary>
+                    <div class="full-content">
+                        <p>En el mundo del coleccionismo es habitual que las fotocards sufran rayones, desgaste en las esquinas o decoloración con el paso del tiempo. Por este motivo, Fandemia prepara el lanzamiento de una línea completa de protección con materiales de alta resistencia pensados para mantener cada tarjeta en perfecto estado.</p>
+                        <p>La colección cuenta con materiales cuidadosamente seleccionados que evitan el amarillamiento del plástico y garantizan una presentación limpia y organizada.</p>
+                        <p>Artículos destacados de la nueva línea:</p>
+                        <ul>
+                            <li>Binders A5 y A4: Carpetas de pasta dura con herrajes metálicos reforzados, cierre elástico y portadas con acabados estéticos.</li>
+                            <li>Sleeves Ultra Transparentes: Fundas protectoras de grosor premium diseñadas a la medida exacta para evitar deslizamientos.</li>
+                            <li>Toploaders Rígidos: Protectores de acrílico duro ideales para transportar fotocards especiales de forma segura.</li>
+                            <li>Stickers de Decoración: Planchas adhesivas holográficas para personalizar las portadas de los organizadores.</li>
+                        </ul>
+                        <p>Los usuarios que sigan las novedades del sitio web tendrán acceso a un 15% de descuento exclusivo durante las primeras 48 horas de preventa.</p>
+                    </div>
+                </details>
+
+                <details class="news-card">
+                    <summary>
+                        <div class="date">Agosto 2026</div>
+                        <h3>El origen de Fandemia y su propuesta de valor</h3>
+                        <p class="short-desc">Conoce los objetivos y la visión detrás de la marca.</p>
+                    </summary>
+                    <div class="full-content">
+                        <p>Ser parte de un fandom de K-pop, anime o videojuegos va más allá del consumo de contenido digital: representa la oportunidad de conectar con historias y comunidades que comparten los mismos gustos.</p>
+                        <p>Fandemia surge como una alternativa local orientada a solucionar las dificultades habituales al adquirir mercancía, como los altos costos de importación y los largos tiempos de espera. La tienda busca ofrecer accesorios accesibles, de buena calidad y listos para entrega.</p>
+                        <p>Principios de la marca:</p>
+                        <ul>
+                            <li>Precios accesibles: Opciones pensadas para estudiantes y coleccionistas que buscan cuidar su economía.</li>
+                            <li>Control de calidad: Revisión detallada de cada producto antes de enviarlo al cliente final.</li>
+                            <li>Atención a la comunidad: Espacio abierto para recibir sugerencias e incluir mercancía a pedido.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="news-card">
+                    <summary>
+                        <div class="date">Agosto 2026</div>
+                        <h3>Guía de cuidado: ¿Cómo conservar fotocards adecuadamente?</h3>
+                        <p class="short-desc">Tres recomendaciones clave para prevenir el deterioro del papel.</p>
+                    </summary>
+                    <div class="full-content">
+                        <p>El material impreso en cartulina es sensible a la humedad, la luz solar directa y el roce constante. Aplicar técnicas de almacenamiento adecuadas es fundamental para prolongar la vida útil de cualquier colección.</p>
+                        <p>Recomendaciones de conservación:</p>
+                        <ul>
+                            <li>Doble Funda (Double Sleeving): Insertar una funda interior ajustada desde arriba hacia abajo y una segunda funda exterior desde abajo hacia arriba. Esto bloquea el ingreso de polvo o partículas.</li>
+                            <li>Uso de materiales Acid-Free: Es importante verificar que los plásticos no contengan PVC, ya que este compuesto libera químicos que desgastan la tinta con el tiempo. Es preferible optar por Polipropileno (PP).</li>
+                            <li>Posición de los Binders: Se recomienda guardar las carpetas organizadoras en posición vertical. Almacenarlas apiladas horizontalmente genera una presión continua que termina marcando las hojas inferiores.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="news-card">
+                    <summary>
+                        <div class="date">Julio 2026</div>
+                        <h3>Tendencias de la temporada en Anime y K-dramas</h3>
+                        <p class="short-desc">Los accesorios más solicitados por los coleccionistas este mes.</p>
+                    </summary>
+                    <div class="full-content">
+                        <p>A través de consultas frecuentes y dinámicas en redes, Fandemia identifica los accesorios más buscados por la comunidad para añadirlos gradualmente al catálogo disponible.</p>
+                        <p>Actualmente existe una marcada preferencia por artículos funcionales que permitan lucir la afición en mochilas, cuadernos o espacios de estudio de manera discreta y estética.</p>
+                        <p>Productos con mayor demanda:</p>
+                        <ul>
+                            <li>Llaveros Acrílicos Doble Capa: Diseñados con impresión protegida que evita raspones por fricción.</li>
+                            <li>Pines Metálicos: Accesorios e insignias con broche de goma de alta fijación para prendas o maletas.</li>
+                            <li>Stickers Impermeables: Calcomanías laminadas resistentes al agua para personalizar computadores o termos.</li>
+                            <li>Standees de Acrílico: Figuras armables con base grabada para decoración de escritorios.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="news-card">
+                    <summary>
+                        <div class="date">Julio 2026</div>
+                        <h3>Buzón de sugerencias para nuevos Fandoms</h3>
+                        <p class="short-desc">Sistema de votación para incluir productos a petición del público.</p>
+                    </summary>
+                    <div class="full-content">
+                        <p>En muchas ocasiones, los grupos musicales emergentes o las series de anime poco comerciales no cuentan con mercancía accesible en las grandes tiendas distribuidoras.</p>
+                        <p>Fandemia busca dar representación a distintos colectivos de fans mediante un sistema mensual de peticiones donde el público propone qué productos le gustaría ver disponibles.</p>
+                        <p>Proceso de selección comunitaria:</p>
+                        <ul>
+                            <li>Recepción de propuestas: Apertura de un formulario web para nominar series, grupos o personajes.</li>
+                            <li>Votación pública: Selección de los cinco títulos más solicitados para realizar una encuesta abierta.</li>
+                            <li>Ingreso al catálogo: La opción ganadora entra directamente al siguiente ciclo de producción de la tienda.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="news-card">
+                    <summary>
+                        <div class="date">Junio 2026</div>
+                        <h3>Presencia de Fandemia en eventos presenciales y ferias</h3>
+                        <p class="short-desc">Proyección de participación en convenciones culturales y geek.</p>
+                    </summary>
+                    <div class="full-content">
+                        <p>A pesar del alcance del comercio digital, la interacción en persona sigue siendo una parte valiosa de la cultura fan. Fandemia proyecta su participación en ferias locales de cultura pop y eventos geek para acercar sus productos al público.</p>
+                        <p>La meta de estas apariciones es estructurar stands dinámicos que promuevan la convivencia entre los asistentes.</p>
+                        <p>Actividades planificadas para los eventos:</p>
+                        <ul>
+                            <li>Mesa de Intercambio (Trade Zone): Espacio adaptado para que los coleccionistas puedan intercambiar fotocards de forma organizada.</li>
+                            <li>Set de Fotografía: Punto decorado con temática de la marca para registro fotográfico de los visitantes.</li>
+                            <li>Dinámicas y Sorteos: Actividades participativas con entrega de stickers, fundas protectoras o cupones de descuento.</li>
+                        </ul>
+                    </div>
+                </details>
+
             </div>
         </div>
     </div>
