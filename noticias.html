@@ -29,18 +29,21 @@
             padding: 1.2rem 1rem;
         }
 
-        header h1 {
-            margin: 0;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: 3rem;
-            letter-spacing: 4px;
-            color: #ffffff;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-            text-transform: uppercase;
+        header .header-logo {
+            max-width: 220px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        header .header-logo:hover {
+            transform: scale(1.03);
         }
 
         header p {
-            margin-top: 0.2rem;
+            margin-top: 0.4rem;
             margin-bottom: 0;
             font-size: 1.1rem;
             color: #ffffff;
@@ -119,7 +122,9 @@
 <body>
 
     <header>
-        <h1>Fandemia</h1>
+        <a href="index.html">
+            <img src="F.png" alt="Logo Fandemia" class="header-logo">
+        </a>
         <p>Tu pasión, tu mundo, tus productos favoritos</p>
     </header>
 
