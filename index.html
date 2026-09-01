@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fandemia</title>
+    <style>
+        :root {
+            --primary: #8a2be2;
+            --secondary: #ff69b4;
+            --bg: #f9f8fc;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 1.2rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 3rem;
+            letter-spacing: 4px;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+        }
+
+        header p {
+            margin-top: 0.2rem;
+            margin-bottom: 0;
+            font-size: 1.1rem;
+            color: #ffffff;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0.8rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .content-box {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .main-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        h1, h2 {
+            color: var(--primary);
+        }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .box {
+            background: #f4effc;
+            padding: 1.2rem;
+            border-radius: 8px;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #1a1a1a;
+            color: white;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fandemia</h1>
+        <p>Tu pasión, tu mundo, tus productos favoritos</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="actividades.html">Contenido Semanal</a>
+        <a href="noticias.html">Noticias y Tips</a>
+    </nav>
+
+    <div class="container">
+        <div class="content-box">
+            <img class="main-img" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800" alt="Evento y Feria Fans K-pop y Anime">
+            
+            <h1>Introducción a la Empresa</h1>
+            <p>
+                La idea de este emprendimiento surge porque a mí me gusta mucho lo relacionado con el K-pop, los K-dramas, los videojuegos, el anime, las series y la música, y a mí me gusta tener cosas de mis grupos favoritos o de mis personajes favoritos, pero a veces es difícil encontrar tiendas que vendan sobre esto, no están a un precio muy accesible o si se pide por internet tardan mucho en llegar.
+            </p>
+            <p>
+                Mi empresa se va a llamar <strong>Fandemia</strong> ya que el ser fan de algo y hacer parte de una comunidad que comparte este gusto es como una fiebre o algo que se va contagiando. Elegí esta idea porque es querer compartir mis gustos personales con más personas y que los demás puedan tener artículos bonitos y de buena calidad sin importar del fandom que sean.
+            </p>
+            <p>
+                Quiero hacer esto porque me parece que puedo usar mis habilidades creativas para planear una tienda con mi propio estilo y donde hayan objetos especiales, además de que al yo hacer parte de este mundo sé qué productos son los que la gente busca o lo que está en tendencia y así la gente puede encontrar cosas sobre lo que les apasiona.
+            </p>
+
+            <div class="grid-info">
+                <div class="box">
+                    <h2>Misión</h2>
+                    <p>La misión es conectar con las personas que les apasiona el K-pop, los videojuegos, las series, el anime y la música, ofreciéndoles un espacio donde puedan conseguir productos bonitos, variados y de buena calidad a precios accesibles. Queremos ser la solución accesible y económica para quienes buscan estos artículos y que puedan encontrar exactamente lo que están buscando.</p>
+                </div>
+                <div class="box">
+                    <h2>Visión</h2>
+                    <p>La visión de Fandemia es posicionarse como la tienda preferida para todos los fandoms por ser una empresa que siempre escucha a sus clientes y trae lo que necesitan y las tendencias del momento. Buscamos que con el tiempo la tienda sea reconocida en más lugares y pueda participar en eventos o ferias, siendo la primera opción para conseguir merch original o difícil de conseguir.</p>
+                </div>
+            </div>
+
+            <h2>Objetivos</h2>
+            <p>Crear una tienda de artículos y merch donde los fans puedan conseguir cosas de sus artistas, series y juegos favoritos a un buen precio y poder acceder fácilmente a ella:</p>
+            <ul>
+                <li>Buscar una buena variedad de productos populares como fotocards, llaveros, pines, pegatinas, figuritas, posters, afiches, etc. de K-pop, anime, K-dramas, videojuegos, etc.</li>
+                <li>Organizar la mercancía en un catálogo para que las personas puedan ver las fotos, consultar precios y elegir sus productos favoritos.</li>
+                <li>Crear promociones especiales de varios productos para que comprar varios artículos salga más económico.</li>
+                <li>Escuchar los pedidos y sugerencias de los clientes para traer artículos específicos que no se consiguen fácilmente en otros lados.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fandemia - Proyecto de Aula</p>
+    </footer>
+
+</body>
+</html>

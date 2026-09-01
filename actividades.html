@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fandemia</title>
+    <style>
+        :root {
+            --primary: #8a2be2;
+            --secondary: #ff69b4;
+            --bg: #f9f8fc;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 1.2rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 3rem;
+            letter-spacing: 4px;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+        }
+
+        header p {
+            margin-top: 0.2rem;
+            margin-bottom: 0;
+            font-size: 1.1rem;
+            color: #ffffff;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0.8rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .content-box {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--primary);
+        }
+
+        .week-block {
+            background: #f4effc;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2rem;
+        }
+
+        .week-block h3 {
+            margin-top: 0;
+        }
+
+        .pdf-viewer {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-top: 0.8rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #1a1a1a;
+            color: white;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fandemia</h1>
+        <p>Tu pasión, tu mundo, tus productos favoritos</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="actividades.html">Contenido Semanal</a>
+        <a href="noticias.html">Noticias y Tips</a>
+    </nav>
+
+    <div class="container">
+        <div class="content-box">
+            <h1>Contenido Semanal</h1>
+
+            <!-- Semana 1 -->
+            <div class="week-block">
+                <h3>Semana 1</h3>
+                
+                <h4>1. Presentación del Proyecto de Aula: Fandemia</h4>
+                <iframe class="pdf-viewer" src="1-1.pdf">
+                    <p>Tu navegador no admite la visualización directa de PDF.</p>
+                </iframe>
+
+                <h4 style="margin-top: 2rem;">2. Productividad Personal y Economía Digital</h4>
+                <iframe class="pdf-viewer" src="1-2.pdf">
+                    <p>Tu navegador no admite la visualización directa de PDF.</p>
+                </iframe>
+            </div>
+
+            <!-- Semana 2 -->
+            <div class="week-block">
+                <h3>Semana 2</h3>
+                
+                <h4>1. Plan Estratégico Fandemia</h4>
+                <iframe class="pdf-viewer" src="2-2.pdf">
+                    <p>Tu navegador no admite la visualización directa de PDF.</p>
+                </iframe>
+            </div>
+
+            <!-- Semana 3 -->
+            <div class="week-block">
+                <h3>Semana 3</h3>
+            </div>
+
+            <!-- Semana 4 -->
+            <div class="week-block">
+                <h3>Semana 4</h3>
+            </div>
+
+            <!-- Semana 5 -->
+            <div class="week-block">
+                <h3>Semana 5</h3>
+            </div>
+
+            <!-- Semana 6 -->
+            <div class="week-block">
+                <h3>Semana 6</h3>
+            </div>
+
+            <!-- Semana 7 -->
+            <div class="week-block">
+                <h3>Semana 7</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fandemia - Proyecto de Aula</p>
+    </footer>
+
+</body>
+</html>
