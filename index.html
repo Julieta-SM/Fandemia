@@ -84,6 +84,7 @@
             border-radius: 12px;
             padding: 2rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
         }
 
         .main-img {
@@ -94,7 +95,7 @@
             margin-bottom: 1.5rem;
         }
 
-        h1, h2 {
+        h1, h2, h3 {
             color: var(--primary);
         }
 
@@ -109,6 +110,31 @@
             background: #f4effc;
             padding: 1.2rem;
             border-radius: 8px;
+        }
+
+        .social-card {
+            background: linear-gradient(135deg, #f4effc 0%, #fff1fe 100%);
+            border: 2px dashed var(--secondary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .btn-social {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 0.8rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-social:hover {
+            background-color: var(--secondary);
         }
 
         ul {
@@ -126,6 +152,16 @@
             color: white;
             margin-top: 2rem;
             font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -178,11 +214,23 @@
                 <li>Crear promociones especiales de varios productos para que comprar varios artículos salga más económico.</li>
                 <li>Escuchar los pedidos y sugerencias de los clientes para traer artículos específicos que no se consiguen fácilmente en otros lados.</li>
             </ul>
+
+            <!-- TARJETA DE CONEXIÓN CON INSTAGRAM -->
+            <div class="social-card">
+                <h3>¡Conéctate con nuestra comunidad en Instagram!</h3>
+                <p>
+                    Para no perderte ningún unboxing, concursos, consejos de cuidado para tus coleccionables y lanzamientos semanales, síguenos en nuestro perfil oficial.
+                </p>
+                <a href="https://instagram.com/fandemia_official" target="_blank" class="btn-social">
+                    Visitar @fandemia_official en Instagram
+                </a>
+            </div>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2026 Fandemia - Proyecto de Aula</p>
+        <p>Síguenos en Instagram: <a href="https://instagram.com/fandemia_official" target="_blank">@fandemia_official</a></p>
     </footer>
 
 </body>
